@@ -45,15 +45,17 @@ class HomeScreen extends StatelessWidget {
                   Pref.isDarkMode = !Pref.isDarkMode;
                   return;
                 }
-
-                Get.dialog(WatchAdDialog(onComplete: () {
-                  //watch ad to gain reward
-                  AdHelper.showRewardedAd(onComplete: () {
                     Get.changeThemeMode(
                         Pref.isDarkMode ? ThemeMode.light : ThemeMode.dark);
                     Pref.isDarkMode = !Pref.isDarkMode;
-                  });
-                }));
+                // Get.dialog(WatchAdDialog(onComplete: () {
+                //   //watch ad to gain reward
+                //   AdHelper.showRewardedAd(onComplete: () {
+                //     Get.changeThemeMode(
+                //         Pref.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+                //     Pref.isDarkMode = !Pref.isDarkMode;
+                //   });
+                // }));
               },
               icon: Icon(
                 Icons.brightness_medium,

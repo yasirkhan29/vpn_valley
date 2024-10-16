@@ -33,11 +33,11 @@ class HomeController extends GetxController {
           config: config);
 
       // log('\nAfter: $config');
-
+VpnEngine.startVpn(vpnConfig);
       //code to show interstitial ad and then connect to vpn
-      AdHelper.showInterstitialAd(onComplete: () async {
-        await VpnEngine.startVpn(vpnConfig);
-      });
+      // AdHelper.showInterstitialAd(onComplete: () async {
+      //   await VpnEngine.startVpn(vpnConfig);
+      // });
     } else {
       await VpnEngine.stopVpn();
     }
